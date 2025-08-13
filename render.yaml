@@ -4,6 +4,7 @@ services:
     env: docker
     plan: free
     dockerfilePath: ./api/Dockerfile
+    buildContext: ./api
     autoDeploy: true
     envVars:
       - key: PORT
@@ -18,6 +19,7 @@ services:
     env: docker
     plan: free
     dockerfilePath: ./builder/Dockerfile
+    buildContext: ./builder
     autoDeploy: true
     envVars:
       - key: PORT
