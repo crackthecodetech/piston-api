@@ -12,10 +12,6 @@ services:
         value: http://piston-builder:3001
     healthCheckPath: /api/v2/piston/runtimes
     numInstances: 1
-    disk:
-      name: piston-api-storage
-      mountPath: /piston
-      sizeGB: 5
 
   - type: worker
     name: piston-builder
@@ -27,7 +23,3 @@ services:
       - key: PORT
         value: 3001
     numInstances: 1
-    disk:
-      name: piston-builder-storage
-      mountPath: /piston
-      sizeGB: 5
